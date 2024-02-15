@@ -4,13 +4,13 @@ import Home from "./Page/Home";
 import Home2 from "./Page/Home2";
 
 const Router = () => {
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/Home2" element={<Home2/>}/>
-            </Routes>
-        </BrowserRouter>
-    )
-}
-export default Router
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home2" element={<Home2 />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+export default Router;
